@@ -68,6 +68,7 @@ dependencies {
     kapt(libs.hilt.compiler)
 
     implementation(libs.material.icons.extended)
+    implementation(libs.splashscreen)
 
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

@@ -3,4 +3,6 @@
     <string name="services">Services</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="bluetooth_desc">Découvrez les appareils bluetooth de votre entourage</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="wifi_desc">Découvrez les appareils wi-fi de votre entourage</string>
 </resources>

@@ -4,8 +4,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Bluetooth
+import androidx.compose.material.icons.rounded.Wifi
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LargeTopAppBar
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MediumTopAppBar
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -29,6 +31,9 @@ fun MainScreen() {
     Scaffold(
         topBar = {
             MediumTopAppBar(
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    scrolledContainerColor = MaterialTheme.colorScheme.background
+                ),
                 title = { Text(text = stringResource(R.string.services)) },
                 scrollBehavior = scrollBehavior
             )
@@ -44,6 +49,13 @@ fun MainScreen() {
                     icon = Icons.Rounded.Bluetooth,
                     title = stringResource(R.string.bluetooth),
                     description = stringResource(R.string.bluetooth_desc)
+                ) {
+
+                }
+                ServiceItemComponent(
+                    icon = Icons.Rounded.Wifi,
+                    title = stringResource(R.string.wi_fi),
+                    description = stringResource(R.string.wifi_desc)
                 ) {
 
                 }
