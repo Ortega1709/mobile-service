@@ -63,10 +63,12 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
     implementation(platform(libs.compose.bom))
+    implementation(platform(libs.compose.bom))
     testImplementation(libs.junit)
 
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation)
+    androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(platform(libs.compose.bom))
     kapt(libs.hilt.compiler)
 

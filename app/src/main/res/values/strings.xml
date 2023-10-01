@@ -12,4 +12,5 @@
     <string name="devices_found">Appareils detéctées</string>
     <string name="no_name">No name</string>
     <string name="paired_devices">Appareils appairés</string>
+    <string name="title_activity_wifi">WifiActivity</string>
 </resources>

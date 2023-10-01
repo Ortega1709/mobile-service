@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- legacy bluetooth permissions -->
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
-    <!--  legacy bluetooth permissions  -->
     <uses-permission
         android:name="android.permission.BLUETOOTH"
         android:maxSdkVersion="30" />
-
-    <uses-permission
-        android:name="android.permission.BLUETOOTH_CONNECT" />
-
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission
         android:name="android.permission.BLUETOOTH_SCAN"
         android:usesPermissionFlags="neverForLocation" />
 
     <uses-feature android:name="android.hardware.bluetooth" />
-
 
     <application
         android:name=".presentation.AppServices"
@@ -29,6 +27,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Services"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.WifiActivity"
+            android:exported="false"
+            android:label="@string/title_activity_wifi"
+            android:theme="@style/Theme.Services" />
         <activity
             android:name=".presentation.BluetoothActivity"
             android:exported="false"

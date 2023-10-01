@@ -11,9 +11,3 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@SuppressLint("StaticFieldLeak")
-class MainViewModel @Inject constructor( private val context: Context): ViewModel() {
-
-
-
-}

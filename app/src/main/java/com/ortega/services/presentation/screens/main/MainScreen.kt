@@ -19,12 +19,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModel
 import com.ortega.services.R
 import com.ortega.services.presentation.BluetoothActivity
+import com.ortega.services.presentation.WifiActivity
 import com.ortega.services.presentation.components.ServiceItemComponent
 import com.ortega.services.presentation.components.TopAppBarComponent
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen(viewModel: MainViewModel) {
+fun MainScreen() {
 
 
     val scrollBehavior =
@@ -52,15 +53,20 @@ fun MainScreen(viewModel: MainViewModel) {
                     title = stringResource(R.string.bluetooth),
                     description = stringResource(R.string.bluetooth_desc)
                 ) {
+
                     val intent = Intent(context, BluetoothActivity::class.java).setAction("")
                     context.startActivity(intent)
+
                 }
                 ServiceItemComponent(
-                    enabled = false,
+                    enabled = true,
                     icon = Icons.Rounded.Wifi,
                     title = stringResource(R.string.wi_fi),
                     description = stringResource(R.string.wifi_desc)
                 ) {
+
+                    val intent = Intent(context, WifiActivity::class.java).setAction("")
+                    context.startActivity(intent)
 
                 }
             }

@@ -48,8 +48,6 @@ class BluetoothController @Inject constructor(private val context: Context) : Co
             return
         }
 
-        println("Start scan")
-
         context.registerReceiver(foundDeviceReceiver, IntentFilter(BluetoothDevice.ACTION_FOUND))
         updatedPairedDevices()
         bluetoothAdapter?.startDiscovery()
