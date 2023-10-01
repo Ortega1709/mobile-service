@@ -1,5 +1,6 @@
 package com.ortega.services.presentation.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
@@ -21,16 +22,47 @@ fun ServiceItemComponent(
     icon: ImageVector,
     title: String,
     description: String,
-    onclick: () -> Unit
+    enabled: Boolean,
+    onClick: () -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { if (enabled) onClick() }
     ) {
 
         ListItem(
             leadingContent = { Icon(imageVector = icon, contentDescription = title) },
             headlineContent = { Text(text = title) },
             supportingContent = { Text(text = description) },
+            trailingContent = {
+                Icon(imageVector = Icons.Rounded.KeyboardArrowRight, contentDescription = null)
+            }
+        )
+
+        Divider(
+            thickness = .5.dp,
+            color = Color.LightGray
+        )
+    }
+}
+
+@Composable
+fun ServiceItemComponent(
+    icon: ImageVector,
+    title: String,
+    enabled: Boolean,
+    onClick: () -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { if (enabled) onClick() }
+    ) {
+
+        ListItem(
+            leadingContent = { Icon(imageVector = icon, contentDescription = title) },
+            headlineContent = { Text(text = title) },
             trailingContent = {
                 Icon(imageVector = Icons.Rounded.KeyboardArrowRight, contentDescription = null)
             }

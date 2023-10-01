@@ -5,4 +5,11 @@
     <string name="bluetooth_desc">Découvrez les appareils bluetooth de votre entourage</string>
     <string name="wi_fi">Wi-Fi</string>
     <string name="wifi_desc">Découvrez les appareils wi-fi de votre entourage</string>
+    <string name="title_activity_bluetooth">BluetoothActivity</string>
+    <string name="back">Retour en arrière</string>
+    <string name="activate">Activer</string>
+    <string name="start_scan">Commencer le scan</string>
+    <string name="devices_found">Appareils detéctées</string>
+    <string name="no_name">No name</string>
+    <string name="paired_devices">Appareils appairés</string>
 </resources>

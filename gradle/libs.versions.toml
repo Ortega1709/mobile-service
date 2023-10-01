@@ -13,6 +13,8 @@ material3-version = "1.1.2"
 hilt-version = "2.44"
 splashscreen-version = "1.0.1"
 
+hilt-navigation-version = "1.0.0"
+
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -33,12 +35,12 @@ material-icons-extended = { group = "androidx.compose.material", name = "materia
 splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreen-version" }
 
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt-version" }
+hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation-version" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt-version" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
 com-google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt-version" }
 
 
