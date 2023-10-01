@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Bluetooth
+import androidx.compose.material.icons.rounded.Vibration
 import androidx.compose.material.icons.rounded.Wifi
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -19,6 +20,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModel
 import com.ortega.services.R
 import com.ortega.services.presentation.BluetoothActivity
+import com.ortega.services.presentation.VibratorActivity
 import com.ortega.services.presentation.WifiActivity
 import com.ortega.services.presentation.components.ServiceItemComponent
 import com.ortega.services.presentation.components.TopAppBarComponent
@@ -47,6 +49,7 @@ fun MainScreen() {
         ) {
 
             item {
+
                 ServiceItemComponent(
                     enabled = true,
                     icon = Icons.Rounded.Bluetooth,
@@ -58,6 +61,7 @@ fun MainScreen() {
                     context.startActivity(intent)
 
                 }
+
                 ServiceItemComponent(
                     enabled = true,
                     icon = Icons.Rounded.Wifi,
@@ -66,6 +70,17 @@ fun MainScreen() {
                 ) {
 
                     val intent = Intent(context, WifiActivity::class.java).setAction("")
+                    context.startActivity(intent)
+
+                }
+
+                ServiceItemComponent(
+                    icon = Icons.Rounded.Vibration,
+                    title = stringResource(R.string.vibrate),
+                    description = stringResource(R.string.vibrate_desc),
+                    enabled = true) {
+
+                    val intent = Intent(context, VibratorActivity::class.java).setAction("")
                     context.startActivity(intent)
 
                 }

@@ -2,8 +2,7 @@ package com.ortega.services.presentation.screens.wifi
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ortega.services.data.wifi.WifiController
-import com.ortega.services.presentation.screens.bluetooth.BluetoothUiState
+import com.ortega.services.services.wifi.WifiController
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

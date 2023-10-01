@@ -1,4 +1,4 @@
-package com.ortega.services.data.bluetooth
+package com.ortega.services.services.bluetooth
 
 import android.bluetooth.BluetoothDevice
 import android.content.BroadcastReceiver

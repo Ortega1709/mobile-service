@@ -1,4 +1,4 @@
-package com.ortega.services.model.bluetooth
+package com.ortega.services.domain.bluetooth
 
 import kotlinx.coroutines.flow.StateFlow
 

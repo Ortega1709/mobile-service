@@ -1,4 +1,4 @@
-package com.ortega.services.data.bluetooth
+package com.ortega.services.services.bluetooth
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -7,10 +7,9 @@ import android.bluetooth.BluetoothManager
 import android.content.Context
 import android.content.IntentFilter
 import android.content.pm.PackageManager
-import android.util.Log
-import com.ortega.services.model.bluetooth.BluetoothModel
-import com.ortega.services.model.bluetooth.Controller
-import com.ortega.services.model.bluetooth.toBluetoothModel
+import com.ortega.services.domain.bluetooth.BluetoothModel
+import com.ortega.services.domain.bluetooth.Controller
+import com.ortega.services.domain.bluetooth.toBluetoothModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

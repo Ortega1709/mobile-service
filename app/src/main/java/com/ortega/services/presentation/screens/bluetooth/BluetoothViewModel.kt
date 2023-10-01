@@ -2,7 +2,7 @@ package com.ortega.services.presentation.screens.bluetooth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ortega.services.data.bluetooth.BluetoothController
+import com.ortega.services.services.bluetooth.BluetoothController
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

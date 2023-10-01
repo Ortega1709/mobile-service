@@ -1,4 +1,4 @@
-package com.ortega.services.model.wifi
+package com.ortega.services.domain.wifi
 
 data class WifiModel(
     val bssid: String,

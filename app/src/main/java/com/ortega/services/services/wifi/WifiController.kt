@@ -1,13 +1,13 @@
-package com.ortega.services.data.wifi
+package com.ortega.services.services.wifi
 
 import android.Manifest
 import android.content.Context
 import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.net.wifi.WifiManager
-import com.ortega.services.model.wifi.Controller
-import com.ortega.services.model.wifi.WifiModel
-import com.ortega.services.model.wifi.toWifiModel
+import com.ortega.services.domain.wifi.Controller
+import com.ortega.services.domain.wifi.WifiModel
+import com.ortega.services.domain.wifi.toWifiModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

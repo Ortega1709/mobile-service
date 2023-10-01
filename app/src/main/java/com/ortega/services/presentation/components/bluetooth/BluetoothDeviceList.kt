@@ -7,7 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.ortega.services.R
-import com.ortega.services.model.bluetooth.BluetoothModel
+import com.ortega.services.domain.bluetooth.BluetoothModel
 
 @Composable
 fun BluetoothDeviceList(

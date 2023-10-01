@@ -1,4 +1,4 @@
-package com.ortega.services.model.wifi
+package com.ortega.services.domain.wifi
 
 import kotlinx.coroutines.flow.StateFlow
 

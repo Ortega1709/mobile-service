@@ -7,7 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.ortega.services.R
-import com.ortega.services.model.wifi.WifiModel
+import com.ortega.services.domain.wifi.WifiModel
 
 @Composable
 fun WifiDeviceList(scannedDevices: List<WifiModel>) {

@@ -1,4 +1,4 @@
-package com.ortega.services.data.wifi
+package com.ortega.services.services.wifi
 
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
