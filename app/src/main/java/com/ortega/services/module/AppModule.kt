@@ -2,6 +2,7 @@ package com.ortega.services.module
 
 import android.content.Context
 import com.ortega.services.services.bluetooth.BluetoothController
+import com.ortega.services.services.light.LightController
 import com.ortega.services.services.vibrator.VibratorController
 import com.ortega.services.services.wifi.WifiController
 import dagger.Module
@@ -31,6 +32,12 @@ object AppModule {
     @Singleton
     fun provideVibratorController(@ApplicationContext context: Context): VibratorController {
         return VibratorController(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideLightController(@ApplicationContext context: Context): LightController {
+        return LightController(context)
     }
 
 }

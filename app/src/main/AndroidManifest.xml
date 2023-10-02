@@ -4,10 +4,12 @@
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-
-    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
     <uses-feature android:name="android.hardware.bluetooth" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -23,6 +25,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Services"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.LightActivity"
+            android:exported="false"
+            android:label="@string/title_activity_light"
+            android:theme="@style/Theme.Services" />
         <activity
             android:name=".presentation.VibratorActivity"
             android:exported="false"

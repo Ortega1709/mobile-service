@@ -5,6 +5,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Bluetooth
+import androidx.compose.material.icons.rounded.FlashlightOn
+import androidx.compose.material.icons.rounded.Motorcycle
+import androidx.compose.material.icons.rounded.Notifications
 import androidx.compose.material.icons.rounded.Vibration
 import androidx.compose.material.icons.rounded.Wifi
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -20,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModel
 import com.ortega.services.R
 import com.ortega.services.presentation.BluetoothActivity
+import com.ortega.services.presentation.LightActivity
 import com.ortega.services.presentation.VibratorActivity
 import com.ortega.services.presentation.WifiActivity
 import com.ortega.services.presentation.components.ServiceItemComponent
@@ -81,6 +85,28 @@ fun MainScreen() {
                     enabled = true) {
 
                     val intent = Intent(context, VibratorActivity::class.java).setAction("")
+                    context.startActivity(intent)
+
+                }
+
+                ServiceItemComponent(
+                    icon = Icons.Rounded.FlashlightOn,
+                    title = stringResource(R.string.torch),
+                    description = stringResource(R.string.flash_desc),
+                    enabled = true) {
+
+                    val intent = Intent(context, LightActivity::class.java).setAction("")
+                    context.startActivity(intent)
+
+                }
+
+                ServiceItemComponent(
+                    icon = Icons.Rounded.Notifications,
+                    title = stringResource(R.string.notifications),
+                    description = stringResource(R.string.notifications_desc),
+                    enabled = true) {
+
+                    val intent = Intent(context, LightActivity::class.java).setAction("")
                     context.startActivity(intent)
 
                 }
