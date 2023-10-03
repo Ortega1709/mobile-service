@@ -25,7 +25,8 @@ import com.ortega.services.presentation.components.TopAppBarComponent
 @Composable
 fun LightScreen(
     startLight: () -> Unit,
-    stopLight: () -> Unit
+    stopLight: () -> Unit,
+    viewModel: LightViewModel
 ) {
 
     val scrollBehavior = TopAppBarDefaults
@@ -51,6 +52,7 @@ fun LightScreen(
 
             ActivateServiceComponent(title = stringResource(id = R.string.activate)) {
                 Switch(
+                    enabled = viewModel.isLightAvailable(),
                     checked = activate,
                     onCheckedChange = {
                         activate = !activate

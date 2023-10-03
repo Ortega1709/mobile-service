@@ -2,6 +2,6 @@ package com.ortega.services.domain.notification
 
 interface Controller {
 
-    fun push(message: String)
+    fun push(title: String, message: String)
 
 }

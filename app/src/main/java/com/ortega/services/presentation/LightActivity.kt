@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ortega.services.presentation.screens.light.LightScreen
 import com.ortega.services.presentation.screens.light.LightViewModel
-import com.ortega.services.presentation.screens.wifi.WifiViewModel
 import com.ortega.services.presentation.theme.ServicesTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,7 +19,8 @@ class LightActivity : ComponentActivity() {
                 val viewModel: LightViewModel = hiltViewModel()
                 LightScreen(
                     startLight = viewModel::startLight,
-                    stopLight = viewModel::stopLight
+                    stopLight = viewModel::stopLight,
+                    viewModel = viewModel
                 )
             }
         }

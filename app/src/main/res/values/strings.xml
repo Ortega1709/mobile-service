@@ -22,4 +22,7 @@
     <string name="flash_desc">Tester le flasheur de votre téléphone</string>
     <string name="notifications">Notifications</string>
     <string name="notifications_desc">Tester les notifs de votre téléphone</string>
+    <string name="title_activity_notification">NotificationActivity</string>
+    <string name="send_notification">Envoyez la notification</string>
+    <string name="message">Message</string>
 </resources>
